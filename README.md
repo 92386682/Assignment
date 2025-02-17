@@ -1,5 +1,5 @@
-![image](https://github.com/user-attachments/assets/fcfa3b2c-b6b2-446f-b1a4-bea35e88a04e)# Creative Coding
-### EPILEPSY WARNING 
+ Creative Coding
+# EPILEPSY WARNING 
 ## BRIGHT, RAPIDLY FLASHING LIGHTS
 
 FA205 Assignment
