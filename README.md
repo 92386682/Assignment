@@ -73,5 +73,7 @@ The choice to manually reset the code was made rather than reloading the entire 
 
 The Title screen likewise made this change necessary, as otherwise the animation would progress through it's stages whether visible or not, depending on how long it took the user to begin. This lead to it playing half finished or completely finished. Aside from WEBGL's neccessity for preLoading fonts, a straightforward piece of work.
 
+Final QoL tweaks, such as window resizing, and canvas adjustments, were also added at this point.
+
 Admittedly, the code is a mess of commented out statements, declared variables that were eventually removed from the code itself, nested if loops (which I believe is poor code practice) and generally resembles a house built out of ice-cream sticks, duct tape and dreams, but regardless, the function is solid. 
 As mentioned, the ideal way to improve this code would be to delete it and start again with the lessons learnt, but regardless.
