@@ -201,7 +201,7 @@ else if (outputnumber > 25*420 & outputnumber < 81*420) {
   }
 
 
-  if (outputnumber > 100*420) {//note the real finish is at 99961, but for the sake of this project, artificially cutting the time down, due to hardware issues running code 420 times p/s
+  if (outputnumber > 100*420) {//note the real finish is at 99961 (2300*420), but for the sake of this project, artificially cutting the time down, due to hardware issues running code 420 times p/s
     resetMatrix();
     samplecount = 0; // in theory, this shouldn't work. It does though.  
     x = 0;
