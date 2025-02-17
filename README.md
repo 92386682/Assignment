@@ -45,6 +45,8 @@ Unchanged from the projects earlier iteration was how output was read and the va
               samplecount++}, 420/1000);// read third column for numerical value, Note this runs from 1-99961. Isn't working perfectly due to hardware, but close enough.
       `
       Fairly self explanatory, but in simple language it reads a decibel value, then moves onto the next line. One downside, which can only be seen behind the scenes, is that I was in no way able to get this code to run correctly 420 times per second. Whether a hardware issue or other factors, trying to adjust the frameRate to 420 resulted in no change. The idea of trying to export full 48Hz audio data, and running the code 48000 times a second seems like an issue to resolve in future projects. Manual adjustment and tweaking was able to achieve a result I was satisfied with, but it constitutes a break from the core "reality" of this project.
+
+As a note, based on peer feedback, is that the decision to not play the original audio or pair it with sound was intentional. Making a white-noise generator or playing the song itself could work fairly easily, but the idea of portraying sound en-absentia was more appealling creatively.
       
 ## Initial scene
 ### "Maypole lines"
