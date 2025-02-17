@@ -1,6 +1,8 @@
  Creative Coding
 # EPILEPSY WARNING 
-## BRIGHT, RAPIDLY FLASHING LIGHTS
+BRIGHT, RAPIDLY FLASHING LIGHTS
+https://92386682.github.io/Assignment/
+
 
 FA205 Assignment
 
@@ -14,6 +16,7 @@ The process was fairly straightforward, accounting the additional z axis syntax 
 to
 
 `line(origin, 0, ycoord, 0, output*3, 0);`
+
 It also necessitated a repitition of the code, to account for a matching "pair" along the z axis, resulting in 
 ![image](https://github.com/user-attachments/assets/248f5267-a727-40d6-b52f-e403dad1d707)
 Note, whilst the could be expressed more succintly, the variety of input/outputs and negative modifiers meant that manual entry was the simplest route.
@@ -23,11 +26,14 @@ Moving on from here, I researched the digitization of analogue sound data more h
 ## Key mechanics
 At it's base, this project is entirely driven by simple WEBGL geometric objects, lines, csv outputs, rotation and if/else statements. 
 For "state" progression from one animation to the next, a placeholder was used for the majority of development, that being 
+
 `if (frameCount > 200 
   {geometry code here}`
+  
 This provided a simple way to transition from one scene to the next, but with (massive) drawbacks, that being the constant rise of framecount regardless of scene. This was later updated to a line counter integrated into the csv on column 3, numbering each sequentially and being read as `outputnumber`. The main benefit of this was being able to start, stop and reset the count whenever needed, mainly to synchronise the beginning with the title screen. Vestigial references to frameCount remain in the code, but primarily for factors that merely need a dynamic element, primarily rotations. 
 
 Unchanged from the projects earlier iteration was how output was read and the variable created, that being:
+
 `      setInterval(() => { 
         output = -(Table.getString(x, 0));
          x++}, 420/1000);//col1
@@ -62,7 +68,10 @@ The final state was originally planned as a simple `scale()` to enlarge and fill
 
 ## Title screen addition, reset & House-Keeping
 At this point, due to time constraints, the work was "finished". Whilst it could be continued, and indeed barely reaches half a million data entry points in the csv, the skills gained through this project mean that honestly, it would be simpler and more efficient to simply stop, and begin from scratch whilst avoiding all the mistakes made.
+
 The choice to manually reset the code was made rather than reloading the entire page, and was achieved by the same if(){} statement that was applied to all state changes. It was during this reset that the move from using `frameCount` to `samplecount / outputnumber` as my timer was made, due to frameCounts status as a system variable. That said, I found that frameCount could in fact be reset as with any other variable, though all documentation I read indicated it should NOT have.
+
 The Title screen likewise made this change necessary, as otherwise the animation would progress through it's stages whether visible or not, depending on how long it took the user to begin. This lead to it playing half finished or completely finished. Aside from WEBGL's neccessity for preLoading fonts, a straightforward piece of work.
+
 Admittedly, the code is a mess of commented out statements, declared variables that were eventually removed from the code itself, nested if loops (which I believe is poor code practice) and generally resembles a house built out of ice-cream sticks, duct tape and dreams, but regardless, the function is solid. 
 As mentioned, the ideal way to improve this code would be to delete it and start again with the lessons learnt, but regardless.
